@@ -11,4 +11,6 @@ JUMPSP = -20;
 
 cooldown = 20;
 
-slowdown = 0.3
+slowdown = 0.3;
+
+keynum = 0;

@@ -9,7 +9,8 @@
         "4f83c1a5-857f-4784-880a-541c050b3da0",
         "2f9ff86b-676c-451e-bcd1-81f50a278941",
         "cfb63bd2-46e7-4a8f-8197-00b547a9e788",
-        "09b181fc-4171-4be3-beab-5eb600d009d5"
+        "09b181fc-4171-4be3-beab-5eb600d009d5",
+        "72d5ee19-352b-4597-9d73-19117f62d9ce"
     ],
     "filterType": "GMObject",
     "folderName": "obj_blocks",

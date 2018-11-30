@@ -10,3 +10,5 @@ WALKSP = 5; // How fast the character moves. Pixels/frame
 JUMPSP = -20; 
 
 cooldown = 20;
+
+keynum = 0;

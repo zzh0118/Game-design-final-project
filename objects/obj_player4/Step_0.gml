@@ -45,8 +45,8 @@ else if (key_right_released){
 
 //Horizontal movement
 var xs = left_n1_right_p1 * WALKSP;
-if (place_meeting(x + xs,y,obj_block1) || place_meeting(x + xs,y,obj_block4)){
-	while( !place_meeting(x + left_n1_right_p1, y, obj_block1) && !place_meeting(x + left_n1_right_p1, y, obj_block4)){
+if (place_meeting(x + xs,y,obj_block1) || place_meeting(x + xs,y,obj_block4)|| place_meeting(x + xs,y,obj_block7)){
+	while( !place_meeting(x + left_n1_right_p1, y, obj_block1) && !place_meeting(x + left_n1_right_p1, y, obj_block4) && !place_meeting(x + left_n1_right_p1, y, obj_block7)){
 		x = x + left_n1_right_p1;
 	}
 	xs = 0
@@ -64,13 +64,15 @@ if (canJump && key_jump){
 
 if (key_fly){
 	ys = slowdown;
+	sprite_index = spr_fly;
+	image_xscale = 1;
 	show_debug_message("slowdown");
 }
 //Gravity
 ys = ys + gr;
 show_debug_message("ys = " + string(ys));
-if (place_meeting(x, y + ys, obj_block1) || place_meeting(x, y + ys, obj_block4)){
-	while (!place_meeting( x, y + sign(ys), obj_block1) && !place_meeting(x, y + sign(ys), obj_block4)){
+if (place_meeting(x, y + ys, obj_block1) || place_meeting(x, y + ys, obj_block4)|| place_meeting(x, y + ys, obj_block7)){
+	while (!place_meeting( x, y + sign(ys), obj_block1) && !place_meeting(x, y + sign(ys), obj_block4)&& !place_meeting(x, y + sign(ys), obj_block7)){
 		y = y + sign(ys);
 	}
 	ys = 0;
@@ -83,7 +85,7 @@ if (place_meeting(x, y + ys, obj_block6)){
 	room_goto_next();
 }
 
-if (place_meeting(x, y + ys, obj_block5) || place_meeting(x , y + ys, obj_block3)){
+if (place_meeting(x, y + ys, obj_block5) || place_meeting(x , y + ys, obj_block3) || place_meeting(x , y + ys, obj_enemy)){
 	room_goto(rm_lose);
 }  
 
